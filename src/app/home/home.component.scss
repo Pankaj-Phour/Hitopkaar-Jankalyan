@@ -1,0 +1,22 @@
+
+.intro{
+    max-width: 100vw;
+    max-height: 100vh;
+    width: 100%;
+    height: calc(100vh - 70px);
+    overflow: hidden;
+}
+ img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.aboutus{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.left,.right{
+    width: 40%;
+}
