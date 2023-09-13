@@ -25,12 +25,20 @@
                 <div class="heading">Some services we provide for our children</div>
                 <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</div>
                 <div class="points">
-
+                <ng-container *ngFor="let point of servicePoints">
+                    <div class="pointHeading">{{point.heading}}</div>
+                    <div class="pointText">{{point.text}}</div>
+                </ng-container>
                 </div>
             </div>
-            <div class="right" [ngStyle]="{'height':serviceLeft.clientHeight + 'px'}">
+            <div class="right" [ngStyle]="{'height':serviceLeft.clientHeight + 'px'}" *ngIf="servicePoints">
                 <img src="assets/services.png" alt="NGO" >
             </div>
+        </div>
+
+
+        <div class="projects">
+            <div class="heading">We are creating a place where children with special needs can thrive</div>
         </div>
     </div>
 </div>
