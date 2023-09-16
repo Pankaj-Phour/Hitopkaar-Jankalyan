@@ -1,0 +1,113 @@
+<section class="footer">
+    <section class="top-footer">
+        <div class="container">
+            <div class="row">
+                <div class="row">
+                <div class="donate-container">
+                    <div class="content">
+                        <div class="text-area">
+                            <h1>You can contribute to provide a place for children with special needs!</h1>
+                        </div>
+                        <div class="btn-area">
+                            <button class="btn my-btn donate-btn">Join as a volunteer</button>
+                            <button class="btn my-btn">Donate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="content-heading">
+                    <h1>Our Events</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="event-box">
+                        <div class="date-area">
+                            <div class="content">
+                                <h1>13</h1>
+                                <p>APR</p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="line-text">
+                                <span class="title">Next Events</span>
+                                <div class="line-text">
+                                    <img src="assets/Line.png" alt="">
+                                </div>
+                            </div>
+                            <h4>A day with our wonderful children</h4>
+                        </div>
+                        <div class="arrow-btn">
+                            <img src="assets/arrow-btn.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="event-box">
+                        <div class="date-area">
+                            <div class="content">
+                                <h1>25</h1>
+                                <p>APR</p>
+                            </div>
+                        </div>
+                        <div class="event-content">
+                            <div class="content">
+                                <div class="line-text">
+                                    <span class="title">Next Events</span>
+                                    <div class="line-text">
+                                        <img src="assets/Line.png" alt="">
+                                    </div>
+                                </div>
+                                <h4>Seminar: Caring for children with autism</h4>
+                            </div>
+                        </div>
+                        
+                        <div class="arrow-btn">
+                            <img src="assets/arrow-btn.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="row">
+                
+            </div>
+        </div>
+    </section>
+    <section class="bottom-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <ng-container *ngFor="let content of footerLinks; let i = index">
+                            <div class="col">
+                                <div class="footer-link">
+                                <p [ngStyle]="{'font-size' : i === 0 ? '24px' : '16px', 'margin-right' : i === 0 ? '100px' : ''}" >{{content.title}}</p>
+                                <ul *ngFor="let link of content.links">
+                                    <ng-container>
+                                        <li>{{link.linkTitle}}</li>
+                                    </ng-container>
+                                    
+                                </ul>
+                            </div>
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <div class="footer-content">
+                        <h1>Subscribe to get latest updates</h1>
+                        <form [formGroup] = "subscribe" >
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Your email" formControlName="email" >
+                                <button class="btn btn-outline-secondary my-btn" type="button" id="button-addon2" (click)="submit()" [disabled]="!subscribe.valid">Subscribe</button>
+                              </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

@@ -1,11 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Roboto:ital,wght@0,100;0,300;0,400;1,300&display=swap');
 
-body{
+// body{
+//     position: relative;
+// }
+// *{
+//     padding: 0px;
+//     margin: 0px;
+//     box-sizing: border-box;
+// }
+
+html, body{
+    // height: 100%;
     position: relative;
-}
-*{
-    padding: 0px;
-    margin: 0px;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+.my-btn{
+    display: inline-flex;
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    background: #FFF;
+    // backdrop-filter: blur(40px);
+    width: fit-content;
+    // border: none;
+}
+
+.my-btn:hover{
+    border: 1px solid white;
+    color: white
 }
