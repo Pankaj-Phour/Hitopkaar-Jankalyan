@@ -6,7 +6,7 @@
 
 .donate-container{
     border-radius: 20px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(../../assets/donationbg.png), lightgray -1.999px -442.286px / 100% 264.757% no-repeat;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('../../assets/donationbg.png'), lightgray -1.999px -442.286px / 100% 264.757% no-repeat;
     padding: 95px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -218,4 +218,40 @@ line-height: 140%; /* 56px */
     button:disabled{
         color: rgba(235, 240, 249, 0.30);
     }
+}
+
+@media screen and (max-width: 995px){
+    .donate-container{
+        padding: 75px 25px;
+         .content{
+            .text-area {
+                width: 100%;
+                h1{
+                    font-size: 36px;
+                }
+            }
+            .btn-area {
+                flex-direction: column;
+                row-gap: 30px;
+            }
+         } 
+    }
+    .date-area{
+        .content{
+            h1{
+                font-size: 36px;
+            }
+        }
+    }
+    .event-content{
+        .content h4 {
+            font-size: 16px;
+        }
+    }
+
+    .footer-content h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+
 }

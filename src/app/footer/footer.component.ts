@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -65,6 +65,9 @@ export class FooterComponent implements OnInit {
     },
     
   ];
+  innerWidth: any;
+
+
 
   subscribe!: FormGroup;
 
@@ -74,7 +77,16 @@ export class FooterComponent implements OnInit {
     })
   }
 
-  ngOnInit(): void {}
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+  this.innerWidth = window.innerWidth;
+}
+
+  ngOnInit() {
+    this.innerWidth = window.innerWidth;
+    console.log(this.innerWidth);
+    
+}
 
   submit(){
     if(this.subscribe.valid){

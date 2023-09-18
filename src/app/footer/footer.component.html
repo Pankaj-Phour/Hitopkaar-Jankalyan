@@ -2,7 +2,6 @@
     <section class="top-footer">
         <div class="container">
             <div class="row">
-                <div class="row">
                 <div class="donate-container">
                     <div class="content">
                         <div class="text-area">
@@ -13,8 +12,8 @@
                             <button class="btn my-btn">Donate</button>
                         </div>
                     </div>
-                </div>
             </div>
+        </div>
             <div class="row mb-5">
                 <div class="content-heading">
                     <h1>Our Events</h1>
@@ -29,6 +28,7 @@
                                 <p>APR</p>
                             </div>
                         </div>
+                        <div class="event-content">
                         <div class="content">
                             <div class="line-text">
                                 <span class="title">Next Events</span>
@@ -38,6 +38,7 @@
                             </div>
                             <h4>A day with our wonderful children</h4>
                         </div>
+                    </div>
                         <div class="arrow-btn">
                             <img src="assets/arrow-btn.png" alt="">
                         </div>
@@ -69,10 +70,6 @@
                     </div>
                 </div>
             </div>
-            </div>
-            <div class="row">
-                
-            </div>
         </div>
     </section>
     <section class="bottom-footer">
@@ -83,7 +80,7 @@
                         <ng-container *ngFor="let content of footerLinks; let i = index">
                             <div class="col">
                                 <div class="footer-link">
-                                <p [ngStyle]="{'font-size' : i === 0 ? '24px' : '16px', 'margin-right' : i === 0 ? '100px' : ''}" >{{content.title}}</p>
+                                <p [ngStyle]="{'font-size' : i === 0 ? '24px' : '16px', 'margin-right' : i === 0 && innerWidth > 995 ? '100px' : ''}" >{{content.title}}</p>
                                 <ul *ngFor="let link of content.links">
                                     <ng-container>
                                         <li>{{link.linkTitle}}</li>

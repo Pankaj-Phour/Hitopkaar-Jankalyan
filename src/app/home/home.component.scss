@@ -98,7 +98,9 @@
 // .projects .heading{
 //     width: 58%;
 // }
-
+.mob-img{
+    display: none;
+}
 .header{
     color: white;
     background-image: url(../../assets/headerbg.png);
@@ -334,4 +336,80 @@
             }
         }
     }
+}
+
+.spend-img{
+    display: flex;
+    justify-content: center;
+}
+
+@media screen  and (max-width: 995px){
+    .mob-img{
+        display: block;
+        img{
+            width: 100%;
+        }
+    }
+    .header{
+        padding-block: 90px;
+        background-image: none;
+        color: black;
+        background-color: #FCEDC6;
+    }
+    .btn-container{
+        justify-content: center;
+    }
+    .video-btn{
+        display: none;
+    }
+    .heading{
+        h1{
+            color: #000;
+            text-align: center;
+            font-size: 48px;
+        }
+    }
+    .header-bottom{
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .line-text{
+        justify-content: center;
+    }
+    .content{
+        h1{
+            text-align: center;
+            font-size: 36px;
+        }
+    }
+    
+    .aboutButton{
+        text-align: center;
+    }
+    .about-img, .supporter-img, .what-we-do-img, .spend-img{
+        img{
+            width: 100%;
+        }
+    }
+
+    .about-us, .projects, .spend{
+        padding-block: 90px;
+    }
+
+    .project-content{
+        .text-area, .btn-area{
+            text-align: center;
+        }
+    }
+
+    .donate-container{
+        width: 100%;
+
+        .content{
+            width: 100%;
+        }
+    }
+
+    
+
 }
