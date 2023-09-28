@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-footer',
@@ -71,7 +72,7 @@ export class FooterComponent implements OnInit {
 
   subscribe!: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private dialog:MatDialog) {
     this.subscribe = this.fb.group({
       email: ['', Validators.compose([Validators.required, Validators.email])]
     })
@@ -93,5 +94,29 @@ export class FooterComponent implements OnInit {
       console.log(this.subscribe.value);
       this.subscribe.reset();
     }
+  }
+
+
+  donate(){
+    this.dialog.open(PaymentComponent,{
+      height:'400px',
+      width:'500px'
+    })
+  }
+}
+
+
+@Component({
+  selector: 'app-payment',
+  templateUrl: './payment.html',
+  styleUrls: ['./footer.component.scss'],
+})
+
+export class PaymentComponent implements OnInit {
+  constructor(){}
+
+  ngOnInit(): void {
+      console.log("Hello from payment component ");
+      
   }
 }
