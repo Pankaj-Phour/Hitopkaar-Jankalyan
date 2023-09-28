@@ -27,4 +27,10 @@ export class NavbarComponent implements OnInit {
   }
 
 
+  scroll(target:string){
+    let element = document.getElementById(target);
+    element?.scrollIntoView({behavior:'smooth'})
+  }
+
+
 }

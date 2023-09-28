@@ -310,3 +310,12 @@ line-height: 140%; /* 56px */
         border: none;
     }
 }
+
+
+
+.event-box:hover{
+    cursor: pointer;
+    transform: translateY(-3px);
+    transition: 0.3s ease-in-out;
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.4);
+}

@@ -10,7 +10,7 @@ import { MatDialog } from '@angular/material/dialog';
 export class FooterComponent implements OnInit {
   footerLinks: any = [
     {
-      title: 'largerthan',
+      title: 'Hitopkaar Jankalyan',
       links: []
     },
     {

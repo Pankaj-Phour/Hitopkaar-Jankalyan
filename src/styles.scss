@@ -50,3 +50,23 @@ html, body{
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+
+// CSS for the scrollbar 
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #F2C94C; 
+  }
