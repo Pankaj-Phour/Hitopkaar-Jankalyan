@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AboutComponent } from './about/about.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatRadioModule} from '@angular/material/radio';
+import { ChartComponent } from './chart/chart.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {MatRadioModule} from '@angular/material/radio';
     HomeComponent,
     FooterComponent,
     AboutComponent,
-    PaymentComponent
+    PaymentComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,

@@ -17,7 +17,7 @@ export class NavbarComponent implements OnInit {
   closeNav(link:any){
     console.log(link);
     if(link !== ''){
-      this.router.navigate([link])
+      // this.router.navigate([link])
     }
     this.mobileNav = false;
   }
