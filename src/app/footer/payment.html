@@ -1,18 +1,23 @@
 <div class="paymentBody">
+    <div class="payment-logo">
+        <img src="assets/ngo-logo.jpg" height="50px" width="50px" alt="Hitopkaar Jankalyan logo">
+    </div>
     <div class="paymentContainer">
-        <form>
-            <div class="formGroup">
-                <label for="donation">Enter amount : </label>
-                <input type="number" placeholder="Enter amount you want to doante">
+        <form [formGroup]="paymentForm">
+            <div class="payment-heading">Donate and Help People</div>
+            <div class="formGroup1">
+                <label for="donation">Enter amount (in Rs.) : </label>
+                <input type="number" placeholder="e.g. 10000" formControlName="amount">
             </div>
             <div class="formGroup">
-                <mat-radio-group aria-label="Select an option">
-                    <mat-radio-button value="1">Option 1</mat-radio-button>
-                    <mat-radio-button value="2">Option 2</mat-radio-button>
+                <mat-label class="label">Choose Payment Method : </mat-label>
+                <mat-radio-group  style="width: 100%;display: flex;justify-content: space-between;align-items: center;" formControlName="type">
+                    <mat-radio-button value="online Payment">Paytm, PhonePay, Google Pay</mat-radio-button>
+                    <mat-radio-button value="card">Credit/Debit card</mat-radio-button>
                   </mat-radio-group>
             </div>
             <div class="buttonSection">
-                <button>Make Payment</button>
+                <button (click)="submit()" [disabled]="paymentForm.invalid">Make Payment</button>
             </div>
         </form>
     </div>

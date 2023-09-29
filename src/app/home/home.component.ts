@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PaymentComponent } from '../footer/footer.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-home',
@@ -19,7 +21,7 @@ export class HomeComponent implements OnInit {
     {img:'../../assets/project2.png', heading:'Weekly excursions', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.'},
     {img:'../../assets/project3.png', heading:'Monthly public awareness', text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.'},
   ]
-  constructor() { }
+  constructor(private dialog:MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -29,4 +31,11 @@ export class HomeComponent implements OnInit {
     element?.scrollIntoView({behavior:'smooth'})
   }
 
+
+  donate(){
+    this.dialog.open(PaymentComponent,{
+      height:'400px',
+      width:'500px'
+    })
+  }
 }

@@ -11,6 +11,7 @@ import { AboutComponent } from './about/about.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatRadioModule} from '@angular/material/radio';
 import { ChartComponent } from './chart/chart.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ChartComponent } from './chart/chart.component';
     FormsModule,
     ReactiveFormsModule,
     MatDialogModule,
-    MatRadioModule
+    MatRadioModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent],

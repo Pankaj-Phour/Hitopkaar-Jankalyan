@@ -113,10 +113,25 @@ export class FooterComponent implements OnInit {
 })
 
 export class PaymentComponent implements OnInit {
-  constructor(){}
+  paymentForm:FormGroup;
+
+  constructor(private _fb:FormBuilder){}
 
   ngOnInit(): void {
       console.log("Hello from payment component ");
-      
+      this.validation();
+  }
+
+
+  validation(){
+    this.paymentForm = this._fb.group({
+      amount:['',Validators.required],
+      type:['',Validators.required]
+    })
+  }
+
+  submit(){
+    console.log(this.paymentForm.value);
+    
   }
 }
