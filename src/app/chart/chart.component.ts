@@ -17,11 +17,12 @@ submitted:boolean = false;
   constructor() { }
 
   ngOnInit(): void {
-   this.charts = HighCharts.chart('chart',this.options)
+   this.charts = HighCharts.chart('chart',this.options);
   }
 
 options:any = {
   chart:{
+    backgroundColor: 'transparent',
     type:this.type || 'pie',
     inverted:false,
     fill:'none'
@@ -31,7 +32,8 @@ options:any = {
     categories: ['Child care home','Cleanliness program','Helping people', 'Excursions','Feeding the poor'],
     title:{
       text:'Donation spends'
-    }
+    },
+    style:{color:'red'}
   },
   title:{
     text:'Donation Spends'
@@ -54,6 +56,9 @@ options:any = {
      series: {
         colorByPoint: true
       }
+    },
+    pie:{
+      size:80
     }
   },
   legend:{
@@ -72,12 +77,19 @@ options:any = {
       innerSize:'40%',
       name:'Spends',
       data:[
-        {name:'Child care home',y:40,color:'#bef3c0'},
+        {name:'Child care home',style:{color:'red'},y:40,color:'#bef3c0'},
         {name:'Cleanliness program',y:35,color:'#ac94f1'},
         {name:'Helping people',y:10,color:'#fff0ca'},
         {name:'Excursions',y:10,color:'#f9cf64'},
         {name:'Feeding the poor',y:5,color:'#f38fbf'},
-      ]
+      ],
+      dataLabels: {
+        enabled: true,
+        style: {
+          color: 'white',
+          textOutline: 'transparent'
+        }
+      },
     }
   ]
 
