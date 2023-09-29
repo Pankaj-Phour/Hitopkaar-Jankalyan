@@ -1,6 +1,6 @@
 
 
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
 import * as HighCharts from 'highcharts'
 @Component({
   selector: 'app-chart',
@@ -16,8 +16,19 @@ submitted:boolean = false;
 
   constructor() { }
 
+
+  @HostListener('window:resize', ['$event'])
+  checkScreenSize(){
+    if(window.innerWidth < 1280){
+      console.log("Changing size of chart");
+      this.options.plotOptions.pie.size = 80;
+      this.charts.update(this.options,true)
+    }
+  }
+
   ngOnInit(): void {
    this.charts = HighCharts.chart('chart',this.options);
+   this.checkScreenSize();
   }
 
 options:any = {
@@ -25,7 +36,7 @@ options:any = {
     backgroundColor: 'transparent',
     type:this.type || 'pie',
     inverted:false,
-    fill:'none'
+    fill:'none',
   },
  
   xAxis:{
@@ -58,7 +69,7 @@ options:any = {
       }
     },
     pie:{
-      size:80
+    
     }
   },
   legend:{
@@ -77,7 +88,7 @@ options:any = {
       innerSize:'40%',
       name:'Spends',
       data:[
-        {name:'Child care home',style:{color:'red'},y:40,color:'#bef3c0'},
+        {name:'Child care home',y:40,color:'#bef3c0'},
         {name:'Cleanliness program',y:35,color:'#ac94f1'},
         {name:'Helping people',y:10,color:'#fff0ca'},
         {name:'Excursions',y:10,color:'#f9cf64'},
@@ -91,7 +102,27 @@ options:any = {
         }
       },
     }
-  ]
+  ],
+  responsive:{
+    rules: [{
+      condition: {
+          maxWidth: 500
+      },
+      chartOptions: {
+          chart: {
+            spacing: [10, 0, 10, 0],
+            margin: [0,0,0,0]
+          },
+          plotOptions: {
+            pie: {
+              dataLabels: {
+                distance: '15%',
+              }
+            }
+          }
+      }
+    }]
+  }
 
  
 }
