@@ -1,25 +1,27 @@
-.top-footer{
+.top-footer {
     background-color: #FEFDFC;
     padding-block: 110px;
 }
 
 
-.donate-container{
+.donate-container {
     border-radius: 20px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(../../assets/donationbg.png), lightgray -1.999px -442.286px / 100% 264.757% no-repeat;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url('../../assets/donationbg.png'), lightgray -1.999px -442.286px / 100% 264.757% no-repeat;
     padding: 95px;
     background-size: cover;
     background-repeat: no-repeat;
     margin-bottom: 85px;
 
-    .content{
+    .content {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        .text-area{
+
+        .text-area {
             width: 80%;
-            h1{
+
+            h1 {
                 color: #FFF;
                 text-align: center;
                 /* H2 */
@@ -27,11 +29,13 @@
                 font-size: 48px;
                 font-style: normal;
                 font-weight: 700;
-                line-height: 120%; /* 57.6px */
+                line-height: 120%;
+                /* 57.6px */
                 margin-bottom: 35px;
             }
         }
-        .btn-area{
+
+        .btn-area {
             width: 100%;
             display: flex;
             flex-direction: row;
@@ -40,30 +44,31 @@
             column-gap: 35px;
         }
 
-       
+
     }
 }
 
-.donate-btn{
+.donate-btn {
     background: #F2C94C;
 }
 
-.donate-btn:hover{
+.donate-btn:hover {
     border-color: #F2C94C;
     color: #F2C94C;
     background: transparent;
 }
 
-.content-heading{
-    color:  #1D2130;
-font-family: Roboto;
-font-size: 40px;
-font-style: normal;
-font-weight: 500;
-line-height: 140%; /* 56px */
+.content-heading {
+    color: #1D2130;
+    font-family: Roboto;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 56px */
 }
 
-.line-text{
+.line-text {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -73,7 +78,7 @@ line-height: 140%; /* 56px */
     flex: 0;
 }
 
-.title{
+.title {
     font-family: Roboto;
     font-size: 16px;
     font-style: normal;
@@ -84,7 +89,7 @@ line-height: 140%; /* 56px */
     color: #1D2130;
 }
 
-.event-box{
+.event-box {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -93,7 +98,8 @@ line-height: 140%; /* 56px */
     background: #F2C94C;
     column-gap: 25px;
 
-    .arrow-btn, .date-area{
+    .arrow-btn,
+    .date-area {
         height: 100%;
         display: flex;
         justify-content: center;
@@ -103,23 +109,25 @@ line-height: 140%; /* 56px */
 }
 
 .content {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    h1{
-        color:  #1D2130;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        color: #1D2130;
         font-family: Roboto;
         font-size: 48px;
         font-style: normal;
         font-weight: 500;
-        line-height: 120%; /* 57.6px */
+        line-height: 120%;
+        /* 57.6px */
         font-variant: small-caps;
     }
 
-    p{
-        color:  #1D2130;
+    p {
+        color: #1D2130;
         font-family: Roboto;
         font-size: 16px;
         font-style: normal;
@@ -129,23 +137,24 @@ line-height: 140%; /* 56px */
         text-transform: uppercase;
     }
 
-    h4{
-        color:#1D2130;
+    h4 {
+        color: #1D2130;
         font-family: Roboto;
         font-size: 28px;
         font-style: normal;
         font-weight: 700;
-        line-height: 150%; /* 42px */
+        line-height: 150%;
+        /* 42px */
     }
 }
 
-.bottom-footer{
+.bottom-footer {
     background-color: black;
     padding-block: 110px;
 }
 
-.footer-link{
-    p{
+.footer-link {
+    p {
         color: #FFF;
         font-family: Roboto;
         font-size: 16px;
@@ -154,39 +163,42 @@ line-height: 140%; /* 56px */
         line-height: 160%;
     }
 
-    ul{
+    ul {
         list-style: none;
         padding-left: 0;
-        li{
+
+        li {
             color: #FFF;
             font-family: Roboto;
             font-size: 14px;
             font-style: normal;
             font-weight: 400;
             line-height: 160%;
-            opacity: 0.78; 
+            opacity: 0.78;
         }
     }
 }
 
-.footer-content{
-    h1{
+.footer-content {
+    h1 {
         color: #FFF;
         font-family: Roboto;
         font-size: 40px;
         font-style: normal;
         font-weight: 700;
-        line-height: 140%; /* 56px */
+        line-height: 140%;
+        /* 56px */
         margin-bottom: 35px;
     }
 
-    input, button{
+    input,
+    button {
         border: 1px solid rgba(235, 240, 249, 0.30);
         border-radius: 4px;
         height: 64px;
     }
 
-    input{
+    input {
         background: transparent;
         color: white;
         font-family: Roboto;
@@ -196,7 +208,7 @@ line-height: 140%; /* 56px */
         line-height: normal;
     }
 
-    input::placeholder{
+    input::placeholder {
         color: rgba(235, 240, 249, 0.30);
         font-family: Roboto;
         font-size: 16px;
@@ -205,17 +217,178 @@ line-height: 140%; /* 56px */
         line-height: normal;
     }
 
-    button{
+    button {
         color: #1D2130;
         text-align: right;
-    font-family: Roboto;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    button:disabled {
+        color: rgba(235, 240, 249, 0.30);
+    }
+}
+
+@media screen and (max-width: 995px) {
+    .donate-container {
+        padding: 75px 25px;
+
+        .content {
+            .text-area {
+                width: 100%;
+
+                h1 {
+                    font-size: 36px;
+                }
+            }
+
+            .btn-area {
+                flex-direction: column;
+                row-gap: 30px;
+            }
+        }
+    }
+
+    .date-area {
+        .content {
+            h1 {
+                font-size: 36px;
+            }
+        }
+    }
+
+    .event-content {
+        .content h4 {
+            font-size: 16px;
+        }
+    }
+
+    .footer-content h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+
+}
+
+
+
+
+// CSS for the payment dialog 
+.paymentBody {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: white;
+
+    .paymentContainer {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    form {
+        height: 100%;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .formGroup {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 15px;
+    }
+
+    .formGroup1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .label {
+        font-size: 19px;
+        margin-bottom: 15px;
+    }
+
+    label {
+        font-size: 18px;
+        font-family: 'Roboto';
+    }
+
+    input {
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid gray;
+        outline: none;
+        border-radius: 10px;
+    }
+
+    .buttonSection button {
+        width: 100%;
+        padding: 10px;
+        font-size: 18px;
+        font-family: 'Roboto';
+        border-radius: 10px;
+    }
+
+    .payment-heading {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    form::ng-deep.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+        border-color: #ff9800;
+    }
+
+    form::ng-deep.mat-radio-button.mat-accent .mat-radio-inner-circle,
+    .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple),
+    .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple,
+    .mat-radio-button.mat-accent:active .mat-radio-persistent-ripple {
+        background-color: #F2C94C;
     }
 
     button:disabled{
-        color: rgba(235, 240, 249, 0.30);
+        background-color: white;
+        color: #F2C94C;
+        border: 2px solid #F2C94C;
+        cursor: not-allowed;
     }
+    button:enabled{
+        background-color: #F2C94C;
+        color: white;
+        border: 2px solid white;
+        cursor: pointer;
+    }
+}
+
+
+
+.event-box:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+    transition: 0.3s ease-in-out;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+
+.payment-logo {
+    transform: rotate(270deg);
+    cursor: pointer;
+    width: 50px;
+}
+
+
+::ng-deep.mat-dialog-container {
+    padding: 10px !important;
 }

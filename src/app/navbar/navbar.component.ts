@@ -17,13 +17,20 @@ export class NavbarComponent implements OnInit {
   closeNav(link:any){
     console.log(link);
     if(link !== ''){
-      this.router.navigate([link])
+      // this.router.navigate([link])
     }
     this.mobileNav = false;
   }
 
-  openNav(){
+  toggleNav(){
     this.mobileNav = !this.mobileNav;
   }
+
+
+  scroll(target:string){
+    let element = document.getElementById(target);
+    element?.scrollIntoView({behavior:'smooth'})
+  }
+
 
 }

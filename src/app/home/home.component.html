@@ -1,72 +1,21 @@
-<!-- <div class="body">
-    <div class="container">
-        <div class="intro">
-            <img src="assets/charity.png" alt="Charitable trust">
-        </div>
-        
-        <div class="aboutus">
-            <div class="left" #aboutLeft>
-                <div class="line-text">
-                    <div class="line-text">
-                        <img src="assets/Line.png" alt="">
-                    </div>
-                    <span class="title">Know about us</span>
-                </div>
-                <div class="heading">We Provide a place for children with special needs</div>
-                <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. ‍</div>
-                <div class="text"> ‍Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</div>
-                <div class="aboutButton">
-                    <button type="button" class="button">Learn more</button>
-                </div>
-            </div>
-            <div class="right" [ngStyle]="{'height':aboutLeft.clientHeight + 'px'}">
-                <img src="assets/about.png" alt="Orphanage">
-            </div>
-        </div>
-
-        <div class="services">
-            <div class="left" #serviceLeft>
-                <div class="line-text">
-                    <div class="line-text">
-                        <img src="assets/Line.png" alt="">
-                    </div>
-                    <span class="title">What we do</span>
-                </div>
-                <div class="heading">Some services we provide for our children</div>
-                <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</div>
-                <div class="points">
-                <ng-container *ngFor="let point of servicePoints">
-                    <div class="pointHeading">{{point.heading}}</div>
-                    <div class="pointText">{{point.text}}</div>
-                </ng-container>
-                </div>
-            </div>
-            <div class="right" [ngStyle]="{'height':serviceLeft.clientHeight + 'px'}" *ngIf="servicePoints">
-                <img src="assets/services.png" alt="NGO" >
-            </div>
-        </div>
-
-
-        <div class="projects">
-            <div class="heading">We are creating a place where children with special needs can thrive</div>
-        </div>
-    </div>
-</div> -->
 
 <section class="home">
+    <div class="mob-img">
+        <img src="assets/headerbg.png" alt="">
+    </div>
     <section class="header">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <div >
+                    <div>
                         <div class="heading">
                             <h1>Inclusive care for children with special needs</h1>
                         </div>
                         <div class="btn-container">
-                            <button class="btn my-btn">What we do</button>
-                            <button class="btn my-btn video-btn">
-                                <img src="assets/playicon.png" alt="">
-                                Play Video
+                            <button class="btn my-btn" (click)="aboutUs()">What we do</button>
+                            <button class="btn my-btn video-btn" (click)="donate()">
+                                <!-- <img src="assets/playicon.png" alt=""> -->
+                                Donate 
                             </button>
                         </div>
                     </div>
@@ -82,7 +31,7 @@
             </div>
         </div>
     </section>
-    <section class="about-us">
+    <section class="about-us" id="about-us">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -198,7 +147,7 @@
             </div>
         </div>
     </section>
-    <section class="projects">
+    <section class="projects" id="projects">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-md-6">
@@ -279,7 +228,7 @@
                 <div class="col-md-1"></div>
                 <div class="col-md-5">
                     <div class="spend-img">
-                        <img src="assets/graph.png" alt="">
+                        <app-chart></app-chart>
                     </div>
                 </div>
             </div>
