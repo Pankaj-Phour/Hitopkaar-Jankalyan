@@ -5,13 +5,13 @@
     <div class="paymentContainer">
         <form [formGroup]="paymentForm">
             <div class="payment-heading">Donate and Help People</div>
-            <div class="formGroup1">
+            <div class="formGroup1 group">
                 <label for="donation">Enter amount (in Rs.) : </label>
                 <input type="number" placeholder="e.g. 10000" formControlName="amount">
             </div>
             <div class="formGroup">
                 <mat-label class="label">Choose Payment Method : </mat-label>
-                <mat-radio-group  style="width: 100%;display: flex;justify-content: space-between;align-items: center;" formControlName="type">
+                <mat-radio-group  style="width: 100%;display: flex;justify-content: space-between;align-items: center;" formControlName="type" class="group">
                     <mat-radio-button value="online Payment">Paytm, PhonePay, Google Pay</mat-radio-button>
                     <mat-radio-button value="card">Credit/Debit card</mat-radio-button>
                   </mat-radio-group>

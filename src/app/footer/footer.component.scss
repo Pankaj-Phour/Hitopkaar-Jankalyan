@@ -271,6 +271,30 @@
         text-align: center;
     }
 
+
+    .group{
+        display: flex;
+        flex-direction: column !important;
+        justify-content: space-around;
+        align-items: flex-start !important;
+        row-gap: 10px !important;
+
+    }
+    .paymentBody{
+        form{
+            padding: 0px !important;
+            justify-content: space-evenly !important;
+        }
+        input{
+            width: 100% !important;
+        }
+        .label{
+            margin-bottom: 0px !important;
+        }
+        .payment-heading{
+            font-size: 21px !important;
+        }
+    }
 }
 
 
